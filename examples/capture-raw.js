@@ -5,7 +5,7 @@ var main = function () {
     
     var cam = new v4l2camera.Camera("/dev/video0");
     if (cam.configGet().formatName !== "MJPG") {
-        console.log("YUYV camera required");
+        console.log("MJPG camera required");
         process.exit(1);
     }
     cam.configSet({width: 352, height: 288});
